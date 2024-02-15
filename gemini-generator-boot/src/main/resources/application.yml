@@ -40,3 +40,8 @@ gemini:
         name: "Apache License 2.0"
         url: "https://www.apache.org/licenses/LICENSE-2.0.html"
         identifier: "Apache-2.0"
+  dynamic:
+    datasource:
+      provider:
+        enabled: true
+        query-ds-sql: "select * from t_datasource where status = 0 and deleted = 0"
