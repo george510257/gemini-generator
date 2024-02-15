@@ -1,0 +1,13 @@
+package ${groupId}.boot.web.converter;
+
+import com.gls.gemini.common.core.base.BaseConverter;
+import ${groupId}.boot.web.entity.DemoEntity;
+import ${groupId}.sdk.vo.DemoVo;
+import org.mapstruct.Mapper;
+import org.mapstruct.MappingConstants;
+import org.mapstruct.NullValuePropertyMappingStrategy;
+
+@Mapper(componentModel = MappingConstants.ComponentModel.SPRING,
+        nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
+public interface DemoConverter extends BaseConverter<DemoVo, DemoEntity> {
+}

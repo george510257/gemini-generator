@@ -1,0 +1,16 @@
+package ${groupId}.boot.web.controller;
+
+import com.gls.gemini.boot.core.base.BaseController;
+import ${groupId}.boot.web.service.DemoService;
+import ${groupId}.sdk.vo.DemoVo;
+import io.swagger.v3.oas.annotations.tags.Tag;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@Slf4j
+@RestController
+@RequestMapping("/demo")
+@Tag(name = "demo", description = "样例")
+public class DemoController extends BaseController<DemoService, DemoVo> {
+}

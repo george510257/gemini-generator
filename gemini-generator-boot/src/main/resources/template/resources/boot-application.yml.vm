@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: ${artifactId}
+  profiles:
+    active: dev
+    include: cloud
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://docker-server:3306/gemini_upms?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+    username: root
+    password: root
+  data:
+    redis:
+      host: docker-server
+      port: 6379
+      database: 7
+      timeout: 10000
+  cache:
+    type: redis
+    redis:
+      cache-null-values: true
+      key-prefix: "${artifactId}:cache:"
+      time-to-live: 1000
+gemini:
+  open-api:
+    enabled: true
+    info:
+      version: 1.0.0
+      title: Gemini UPMS Boot
+      description: "用户权限管理系统"
+      contact:
+        name: "Gemini UPMS"
+        email: "gemini@glseven.com"
+        url: "https://www.glseven.com"
+      license:
+        name: Apache License 2.0
+        url: https://www.apache.org/licenses/LICENSE-2.0.html
+        identifier: Apache-2.0
