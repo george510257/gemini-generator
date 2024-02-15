@@ -62,7 +62,6 @@ public enum CodeEnums implements IEnums {
      */
     SDK_FEIGN(13, "sdk项目feign", "sdk-feign.java.vm", "/java", "{entityType}Feign.java", "{artifactId}/{artifactId}-sdk/src/main/java/{packagePath}/sdk/feign");
 
-
     /**
      * 编码
      */

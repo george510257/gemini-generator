@@ -16,5 +16,4 @@ public class GeneratorProperties extends BaseProperties {
      */
     private String path;
 
-
 }

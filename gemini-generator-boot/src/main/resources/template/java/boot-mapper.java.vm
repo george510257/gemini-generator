@@ -1,7 +1,7 @@
 package ${groupId}.boot.web.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import ${groupId}.boot.web.entity.DemoEntity;
+import ${groupId}.boot.web.entity.${entityNameUpper}Entity;
 
-public interface DemoMapper extends BaseMapper<DemoEntity> {
+public interface ${entityNameUpper}Mapper extends BaseMapper<${entityNameUpper}Entity> {
 }

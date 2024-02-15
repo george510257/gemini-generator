@@ -32,35 +32,15 @@ public class MavenVo implements Serializable {
     @Schema(title = "name", description = "name 例如：generator")
     private String name;
     /**
+     * nameUpper 例如：Generator
+     */
+    @Schema(title = "nameUpper", description = "nameUpper 例如：Generator")
+    private String nameUpper;
+    /**
      * description 例如：代码生成器
      */
     @Schema(title = "description", description = "description 例如：代码生成器")
     private String description;
-    /**
-     * packaging 例如：jar
-     */
-    @Schema(title = "packaging", description = "packaging 例如：jar")
-    private String packaging;
-    /**
-     * javaVersion 例如：1.8
-     */
-    @Schema(title = "javaVersion", description = "javaVersion 例如：1.8")
-    private String javaVersion;
-    /**
-     * springBootVersion 例如：2.5.0
-     */
-    @Schema(title = "springBootVersion", description = "springBootVersion 例如：2.5.0")
-    private String springBootVersion;
-    /**
-     * parentGroupId 例如：com.gls.gemini
-     */
-    @Schema(title = "parentGroupId", description = "parentGroupId 例如：com.gls.gemini")
-    private String parentGroupId;
-    /**
-     * parentArtifactId 例如：gemini-project
-     */
-    @Schema(title = "parentArtifactId", description = "parentArtifactId 例如：gemini-project")
-    private String parentArtifactId;
     /**
      * parentVersion 例如：0.0.1-SNAPSHOT
      */

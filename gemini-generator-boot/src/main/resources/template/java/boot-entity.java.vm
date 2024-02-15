@@ -7,10 +7,13 @@ import lombok.EqualsAndHashCode;
 
 import java.io.Serial;
 
+/**
+*
+*/
 @Data
 @EqualsAndHashCode(callSuper = true)
-@TableName("t_demo")
-public class DemoEntity extends BaseEntity {
+@TableName("${tableName}")
+public class ${entityNameUpper}Entity extends BaseEntity {
 
     public static final String COL_NAME = "name";
     public static final String COL_DESCRIPTION = "description";

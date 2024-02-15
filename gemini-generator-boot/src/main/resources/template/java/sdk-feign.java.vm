@@ -1,12 +1,12 @@
 package ${groupId}.sdk.feign;
 
 import com.gls.gemini.sdk.core.feign.BaseFeign;
-import ${groupId}.sdk.vo.DemoVo;
+import ${groupId}.sdk.vo.${entityNameUpper}Vo;
 import org.springframework.cloud.openfeign.FeignClient;
 
 /**
- * demo feign
+ * ${entityName} feign
  */
-@FeignClient(name = "${artifactId}", contextId = "demo", path = "/demo")
-public interface DemoFeign extends BaseFeign<DemoVo> {
+@FeignClient(name = "${artifactId}", contextId = "${entityName}", path = "/${entityName}")
+public interface ${entityNameUpper}Feign extends BaseFeign<${entityNameUpper}Vo> {
 }

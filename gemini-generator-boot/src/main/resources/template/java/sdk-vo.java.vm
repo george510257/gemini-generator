@@ -10,8 +10,8 @@ import lombok.EqualsAndHashCode;
 
 @Data
 @EqualsAndHashCode(callSuper = true)
-@Schema(title = "demo", description = "样例vo")
-public class DemoVo extends BaseVo {
+@Schema(title = "${entityName}", description = "${entityDescription}Vo")
+public class ${entityNameUpper}Vo extends BaseVo {
 
     @ExcelProperty(value = "名称")
     @Schema(title = "名称", description = "名称")

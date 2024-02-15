@@ -13,6 +13,10 @@
     <artifactId>${artifactId}</artifactId>
     <version>${version}</version>
     <packaging>pom</packaging>
+
+    <name>${name}</name>
+    <description>${description}</description>
+
     <modules>
         <module>${artifactId}-boot</module>
         <module>${artifactId}-sdk</module>
