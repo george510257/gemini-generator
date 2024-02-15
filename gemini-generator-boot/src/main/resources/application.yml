@@ -1,0 +1,42 @@
+spring:
+  application:
+    name: gemini-generator
+  profiles:
+    active: dev
+    include: cloud
+  data:
+    redis:
+      host: docker-server
+      port: 6379
+      database: 7
+      timeout: 10000
+  cache:
+    type: redis
+    redis:
+      cache-null-values: true
+      key-prefix: "gemini-generator:cache:"
+      time-to-live: 1000
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://docker-server:3306/gemini_generator?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+    username: root
+    password: root
+  cloud:
+    inetutils:
+      preferred-networks:
+        - 192.168.31.
+gemini:
+  open-api:
+    enabled: true
+    info:
+      version: 1.0.0
+      title: Gemini Generator Boot
+      description: "代码生成器"
+      contact:
+        name: "Gemini Generator"
+        email: "gemini@glseven.com"
+        url: "https://www.glseven.com"
+      license:
+        name: "Apache License 2.0"
+        url: "https://www.apache.org/licenses/LICENSE-2.0.html"
+        identifier: "Apache-2.0"
