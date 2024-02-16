@@ -32,11 +32,6 @@ public class MavenVo implements Serializable {
     @Schema(title = "name", description = "name 例如：generator")
     private String name;
     /**
-     * nameUpper 例如：Generator
-     */
-    @Schema(title = "nameUpper", description = "nameUpper 例如：Generator")
-    private String nameUpper;
-    /**
      * description 例如：代码生成器
      */
     @Schema(title = "description", description = "description 例如：代码生成器")

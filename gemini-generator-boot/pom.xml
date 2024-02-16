@@ -30,6 +30,11 @@
             <groupId>com.gls.gemini.starter.dynamic.datasource</groupId>
             <artifactId>gemini-starter-dynamic-datasource</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.apache.velocity</groupId>
+            <artifactId>velocity-engine-core</artifactId>
+            <version>2.3</version>
+        </dependency>
     </dependencies>
 
     <build>

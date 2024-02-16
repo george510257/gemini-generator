@@ -14,6 +14,6 @@ public class GeneratorProperties extends BaseProperties {
     /**
      * 代码生成路径
      */
-    private String path;
+    private String tempPath = "E:\\gemini-temp";
 
 }

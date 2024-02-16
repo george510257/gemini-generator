@@ -13,81 +13,71 @@ public enum CodeEnums implements IEnums {
     /**
      * 父项目pom文件
      */
-    PARENT_POM(1, "父项目pom文件", "parent-pom.xml.vm", "/pom", "pom.xml", "{artifactId}"),
-
+    PARENT_POM(1, "父项目pom文件", "/pom/parent-pom.xml.vm", "/{artifactId}/pom.xml"),
     /**
      * boot项目pom文件
      */
-    BOOT_POM(2, "boot项目pom文件", "boot-pom.xml.vm", "/pom", "pom.xml", "{artifactId}/{artifactId}-boot"),
+    BOOT_POM(2, "boot项目pom文件", "/pom/boot-pom.xml.vm", "/{artifactId}/{artifactId}-boot/pom.xml"),
     /**
-     * boot项目application
+     * boot项目Application.java
      */
-    BOOT_APPLICATION(3, "boot项目application", "boot-application.java.vm", "/java", "{appName}BootApplication.java", "{artifactId}/{artifactId}-boot/src/main/java/{packagePath}/boot"),
+    BOOT_APPLICATION(3, "boot项目Application.java", "/java/boot-application.java.vm", "/{artifactId}/{artifactId}-boot/src/main/java/{packagePath}/boot/{nameUpper}BootApplication.java"),
     /**
      * boot项目application.yml
      */
-    BOOT_APPLICATION_YML(4, "boot项目application.yml", "boot-application.yml.vm", "/resources", "application.yml", "{artifactId}/{artifactId}-boot/src/main/resources"),
+    BOOT_APPLICATION_YML(4, "boot项目application.yml", "/resources/boot-application.yml.vm", "/{artifactId}/{artifactId}-boot/src/main/resources/application.yml"),
     /**
-     * boot项目controller
+     * boot项目Controller.java
      */
-    BOOT_CONTROLLER(5, "boot项目controller", "boot-controller.java.vm", "/java", "{entityType}Controller.java", "{artifactId}/{artifactId}-boot/src/main/java/{packagePath}/boot/web/controller"),
+    BOOT_CONTROLLER(5, "boot项目Controller.java", "/java/boot-controller.java.vm", "/{artifactId}/{artifactId}-boot/src/main/java/{packagePath}/boot/web/controller/{entityNameUpper}Controller.java"),
     /**
-     * boot项目converter
+     * boot项目Converter.java
      */
-    BOOT_CONVERTER(6, "boot项目converter", "boot-converter.java.vm", "/java", "{entityType}Converter.java", "{artifactId}/{artifactId}-boot/src/main/java/{packagePath}/boot/web/converter"),
+    BOOT_CONVERTER(6, "boot项目Converter.java", "/java/boot-converter.java.vm", "/{artifactId}/{artifactId}-boot/src/main/java/{packagePath}/boot/web/converter/{entityNameUpper}Converter.java"),
     /**
-     * boot项目entity
+     * boot项目Entity.java
      */
-    BOOT_ENTITY(7, "boot项目entity", "boot-entity.java.vm", "/java", "{entityType}.java", "{artifactId}/{artifactId}-boot/src/main/java/{packagePath}/boot/web/entity"),
+    BOOT_ENTITY(7, "boot项目Entity.java", "/java/boot-entity.java.vm", "/{artifactId}/{artifactId}-boot/src/main/java/{packagePath}/boot/web/entity/{entityNameUpper}Entity.java"),
     /**
-     * boot项目mapper
+     * boot项目Mapper.java
      */
-    BOOT_MAPPER(8, "boot项目mapper", "boot-mapper.java.vm", "/java", "{entityType}Mapper.java", "{artifactId}/{artifactId}-boot/src/main/java/{packagePath}/boot/web/mapper"),
+    BOOT_MAPPER(8, "boot项目Mapper.java", "/java/boot-mapper.java.vm", "/{artifactId}/{artifactId}-boot/src/main/java/{packagePath}/boot/web/mapper/{entityNameUpper}Mapper.java"),
     /**
-     * boot项目mapper.xml
+     * boot项目Mapper.xml
      */
-    BOOT_MAPPER_XML(9, "boot项目mapper.xml", "boot-mapper.xml.vm", "/resources", "{entityType}Mapper.xml", "{artifactId}/{artifactId}-boot/src/main/resources/mapper"),
+    BOOT_MAPPER_XML(9, "boot项目Mapper.xml", "/resources/boot-mapper.xml.vm", "/{artifactId}/{artifactId}-boot/src/main/resources/mapper/{entityNameUpper}Mapper.xml"),
     /**
-     * boot项目service
+     * boot项目Service.java
      */
-    BOOT_SERVICE(10, "boot项目service", "boot-service.java.vm", "/java", "{entityType}Service.java", "{artifactId}/{artifactId}-boot/src/main/java/{packagePath}/boot/web/service"),
-
+    BOOT_SERVICE(10, "boot项目Service.java", "/java/boot-service.java.vm", "/{artifactId}/{artifactId}-boot/src/main/java/{packagePath}/boot/web/service/{entityNameUpper}Service.java"),
     /**
      * sdk项目pom文件
      */
-    SDK_POM(11, "sdk项目pom文件", "sdk-pom.xml.vm", "/pom", "pom.xml", "{artifactId}/{artifactId}-sdk"),
+    SDK_POM(11, "sdk项目pom文件", "/pom/sdk-pom.xml.vm", "/{artifactId}/{artifactId}-sdk/pom.xml"),
     /**
-     * sdk项目vo
+     * sdk项目Vo.java
      */
-    SDK_VO(12, "sdk项目vo", "sdk-vo.java.vm", "/java", "{entityType}Vo.java", "{artifactId}/{artifactId}-sdk/src/main/java/{packagePath}/sdk/vo"),
+    SDK_VO(12, "sdk项目Vo.java", "/java/sdk-vo.java.vm", "/{artifactId}/{artifactId}-sdk/src/main/java/{packagePath}/sdk/vo/{entityNameUpper}Vo.java"),
     /**
-     * sdk项目feign
+     * sdk项目FeignClient.java
      */
-    SDK_FEIGN(13, "sdk项目feign", "sdk-feign.java.vm", "/java", "{entityType}Feign.java", "{artifactId}/{artifactId}-sdk/src/main/java/{packagePath}/sdk/feign");
+    SDK_FEIGN(13, "sdk项目FeignClient.java", "/java/sdk-feign.java.vm", "/{artifactId}/{artifactId}-sdk/src/main/java/{packagePath}/sdk/feign/{entityNameUpper}Feign.java");
 
     /**
      * 编码
      */
     private final Integer code;
     /**
-     * 名称
+     * 消息
      */
     private final String message;
     /**
-     * 模板
+     * 模板路径
      */
     private final String template;
     /**
-     * 模板路径
-     */
-    private final String templatePath;
-    /**
-     * 文件名
+     * 文件路径
      */
     private final String fileName;
-    /**
-     * 文件包
-     */
-    private final String filePackage;
 
 }
