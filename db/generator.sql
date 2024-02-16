@@ -25,7 +25,7 @@ create table t_datasource
     username          varchar(32)                                                            not null comment '用户名',
     password          varchar(32)                                                            not null comment '密码',
     driver_class_name varchar(64)                                                            not null comment '驱动类名',
-    type              tinyint unsigned                                                       not null comment '数据源类型 0:MySQL 1:Oracle 2:SQLServer 3:PostgreSQL',
+    type              tinyint unsigned                                                       not null comment '数据源类型 0:MySQL 1:Oracle 2:SQLServer 3:Postgresql',
     description       varchar(255)                                                           not null comment '描述',
     status            tinyint unsigned                                                       not null comment '状态 0:禁用 1:启用',
     tenant_id         bigint unsigned  default 0                                             not null comment '租户id 0:公共租户',
