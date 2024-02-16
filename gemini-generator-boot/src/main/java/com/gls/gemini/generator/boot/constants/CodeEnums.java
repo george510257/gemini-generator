@@ -4,6 +4,9 @@ import com.gls.gemini.common.core.interfaces.IEnums;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
+/**
+ * 代码生成器枚举
+ */
 @Getter
 @RequiredArgsConstructor
 public enum CodeEnums implements IEnums {

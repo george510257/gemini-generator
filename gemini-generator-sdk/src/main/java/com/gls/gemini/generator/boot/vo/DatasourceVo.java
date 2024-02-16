@@ -1,7 +1,9 @@
 package com.gls.gemini.generator.boot.vo;
 
 import com.alibaba.excel.annotation.ExcelProperty;
+import com.gls.gemini.generator.boot.converter.DatasourceTypeConverter;
 import com.gls.gemini.sdk.core.vo.BaseVo;
+import com.gls.gemini.starter.excel.converter.StatusConverter;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -45,7 +47,7 @@ public class DatasourceVo extends BaseVo implements Serializable {
     /**
      * 数据源类型 0:mysql 1:oracle 2:sqlserver 3:postgresql
      */
-    @ExcelProperty(value = "数据源类型")
+    @ExcelProperty(value = "数据源类型", converter = DatasourceTypeConverter.class)
     @Schema(title = "数据源类型", description = "数据源类型 0:mysql 1:oracle 2:sqlserver 3:postgresql ")
     private Integer type;
     /**
@@ -57,7 +59,7 @@ public class DatasourceVo extends BaseVo implements Serializable {
     /**
      * 状态 0:正常 1:禁用
      */
-    @ExcelProperty(value = "状态")
+    @ExcelProperty(value = "状态", converter = StatusConverter.class)
     @Schema(title = "状态", description = "状态 0:正常 1:禁用")
     private Integer status;
 }
