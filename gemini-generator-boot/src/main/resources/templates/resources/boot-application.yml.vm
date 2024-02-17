@@ -25,14 +25,14 @@ gemini:
   open-api:
     enabled: true
     info:
-      version: 1.0.0
-      title: Gemini ${nameUpper} Boot
+      version: "${version}"
+      title: "${name} Boot"
       description: "${description}"
       contact:
-        name: "Gemini ${nameUpper}"
+        name: "${name}"
         email: "gemini@glseven.com"
         url: "https://www.glseven.com"
       license:
-        name: Apache License 2.0
-        url: https://www.apache.org/licenses/LICENSE-2.0.html
-        identifier: Apache-2.0
+        name: "Apache License 2.0"
+        url: "https://www.apache.org/licenses/LICENSE-2.0.html"
+        identifier: "Apache-2.0"

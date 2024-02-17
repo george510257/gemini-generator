@@ -16,7 +16,7 @@
         <dependency>
             <groupId>${groupId}.sdk</groupId>
             <artifactId>${artifactId}-sdk</artifactId>
-            <version>${version}</version>
+            <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>com.gls.gemini.boot.core</groupId>
@@ -27,4 +27,13 @@
             <artifactId>gemini-boot-cloud</artifactId>
         </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 </project>
