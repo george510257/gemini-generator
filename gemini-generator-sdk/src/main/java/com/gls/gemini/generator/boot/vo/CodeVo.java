@@ -21,4 +21,10 @@ public class CodeVo implements Serializable {
     @Schema(title = "数据源信息", description = "数据源信息")
     private DatasourceVo datasource;
 
+    /**
+     * 表名前缀
+     */
+    @Schema(title = "表名前缀", description = "表名前缀")
+    private String tablePrefix;
+
 }

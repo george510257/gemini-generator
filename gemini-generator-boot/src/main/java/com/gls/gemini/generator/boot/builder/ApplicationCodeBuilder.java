@@ -42,7 +42,7 @@ public class ApplicationCodeBuilder implements CodeBuilder {
         // 获取表信息
         List<TableDto> tables = datasourceService.getAllTables();
         // 获取模板数据
-        Map<String, Object> templateData = TemplateDataConverter.convert(maven, datasource, tables);
+        Map<String, Object> templateData = TemplateDataConverter.convert(maven, datasource, tables, codeVo.getTablePrefix());
         log.info("templateData: {}", templateData);
 
         // 生成文件 - 父pom

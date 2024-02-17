@@ -28,11 +28,11 @@ public class TemplateDataConverter {
      * @param tables     表信息
      * @return 模板数据
      */
-    public Map<String, Object> convert(MavenVo maven, DatasourceVo datasource, List<TableDto> tables) {
+    public Map<String, Object> convert(MavenVo maven, DatasourceVo datasource, List<TableDto> tables, String tablePrefix) {
         Map<String, Object> templateData = new HashMap<>();
         templateData.putAll(convert(maven));
         templateData.putAll(convert(datasource));
-        templateData.put("tables", convertTables(tables));
+        templateData.put("tables", convertTables(tables, tablePrefix));
         return templateData;
     }
 
@@ -45,11 +45,11 @@ public class TemplateDataConverter {
      * @param columns    列信息
      * @return 模板数据
      */
-    public Map<String, Object> convert(MavenVo maven, DatasourceVo datasource, TableDto table, List<ColumnDto> columns) {
+    public Map<String, Object> convert(MavenVo maven, DatasourceVo datasource, TableDto table, String tablePrefix, List<ColumnDto> columns) {
         Map<String, Object> templateData = new HashMap<>();
         templateData.putAll(convert(maven));
         templateData.putAll(convert(datasource));
-        templateData.putAll(convert(table));
+        templateData.putAll(convert(table, tablePrefix));
         templateData.put("columns", convertColumns(columns));
         return templateData;
     }
@@ -100,20 +100,21 @@ public class TemplateDataConverter {
      * @param tables 表信息
      * @return 表信息
      */
-    private List<Map<String, Object>> convertTables(List<TableDto> tables) {
-        return tables.stream().map(TemplateDataConverter::convert).collect(Collectors.toList());
+    private List<Map<String, Object>> convertTables(List<TableDto> tables, String tablePrefix) {
+        return tables.stream().map(table -> convert(table, tablePrefix)).collect(Collectors.toList());
     }
 
     /**
      * 转换表信息
      *
-     * @param tableDto 表信息
+     * @param tableDto    表信息
+     * @param tablePrefix 表前缀
      * @return 表信息
      */
-    private Map<String, Object> convert(TableDto tableDto) {
+    private Map<String, Object> convert(TableDto tableDto, String tablePrefix) {
         Map<String, Object> templateData = BeanUtil.beanToMap(tableDto);
         // entityName 例如：sysUser
-        String entityName = StrUtil.toCamelCase(tableDto.getTableName());
+        String entityName = StrUtil.toCamelCase(StrUtil.removePrefix(tableDto.getTableName(), tablePrefix));
         templateData.put("entityName", entityName);
         // entityNameUpper 例如：SysUser
         templateData.put("entityNameUpper", StrUtil.upperFirst(entityName));

@@ -49,7 +49,7 @@ public class WebCodeBuilder implements CodeBuilder {
             // 获取列信息
             List<ColumnDto> columns = allColumns.get(table.getTableName());
             // 获取模板数据
-            Map<String, Object> templateData = TemplateDataConverter.convert(maven, datasource, table, columns);
+            Map<String, Object> templateData = TemplateDataConverter.convert(maven, datasource, table, codeVo.getTablePrefix(), columns);
             log.info("templateData: {}", templateData);
 
             // 生成文件 - boot controller
