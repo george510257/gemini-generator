@@ -16,13 +16,17 @@ import java.util.List;
  */
 @Service
 public class CodeService {
+    /**
+     * 代码生成配置
+     */
     @Resource
     private GeneratorProperties generatorProperties;
 
+    /**
+     * 代码生成器
+     */
     @Resource
     private List<CodeBuilder> codeBuilders;
-    @Resource
-    private DatasourceService datasourceService;
 
     /**
      * 生成代码
@@ -33,8 +37,6 @@ public class CodeService {
     public File generate(CodeVo codeVo) {
         // 创建临时文件夹
         File root = this.getRootPath(codeVo.getMaven().getArtifactId());
-        // 切换数据源
-        datasourceService.switchDatasource(codeVo.getDatasource());
         // 生成代码
         codeBuilders.forEach(codeBuilder -> codeBuilder.createFile(root, codeVo));
         // 压缩文件
@@ -56,7 +58,7 @@ public class CodeService {
         // 判断文件夹是否存在 不存在则创建 存在则清空文件夹
         File root = new File(rootPath);
         if (root.exists()) {
-            root.delete();
+            FileUtil.del(root);
         }
         root.mkdirs();
         return root;

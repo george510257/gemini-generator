@@ -25,5 +25,9 @@ public class ColumnDto implements Serializable {
      * 排序
      */
     private Long ordinalPosition;
+    /**
+     * 表名
+     */
+    private String tableName;
 
 }

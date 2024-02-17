@@ -23,9 +23,18 @@ import java.util.Map;
 @Component
 public class WebCodeBuilder implements CodeBuilder {
 
+    /**
+     * 数据源服务
+     */
     @Resource
     private DatasourceService datasourceService;
 
+    /**
+     * 生成代码
+     *
+     * @param root   根目录
+     * @param codeVo 代码请求
+     */
     @Override
     public void createFile(File root, CodeVo codeVo) {
         // 获取maven信息
@@ -33,10 +42,12 @@ public class WebCodeBuilder implements CodeBuilder {
         // 获取数据源信息
         DatasourceVo datasource = codeVo.getDatasource();
         // 获取表信息
-        List<TableDto> tables = datasourceService.getTables();
+        List<TableDto> tables = datasourceService.getAllTables();
+        // 获取所有列信息
+        Map<String, List<ColumnDto>> allColumns = datasourceService.getAllColumns();
         for (TableDto table : tables) {
             // 获取列信息
-            List<ColumnDto> columns = datasourceService.getColumns(table);
+            List<ColumnDto> columns = allColumns.get(table.getTableName());
             // 获取模板数据
             Map<String, Object> templateData = TemplateDataConverter.convert(maven, datasource, table, columns);
             log.info("templateData: {}", templateData);

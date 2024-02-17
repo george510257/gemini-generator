@@ -27,6 +27,12 @@ public class ApplicationCodeBuilder implements CodeBuilder {
     @Resource
     private DatasourceService datasourceService;
 
+    /**
+     * 生成代码
+     *
+     * @param root   根目录
+     * @param codeVo 代码请求
+     */
     @Override
     public void createFile(File root, CodeVo codeVo) {
         // 获取maven信息
@@ -34,7 +40,7 @@ public class ApplicationCodeBuilder implements CodeBuilder {
         // 获取数据源信息
         DatasourceVo datasource = codeVo.getDatasource();
         // 获取表信息
-        List<TableDto> tables = datasourceService.getTables();
+        List<TableDto> tables = datasourceService.getAllTables();
         // 获取模板数据
         Map<String, Object> templateData = TemplateDataConverter.convert(maven, datasource, tables);
         log.info("templateData: {}", templateData);

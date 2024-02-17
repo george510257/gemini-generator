@@ -15,6 +15,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 /**
  * 数据源管理 service
@@ -25,17 +27,17 @@ import java.util.List;
 @Service
 public class DatasourceService extends BaseServiceImpl<DatasourceConverter, DatasourceMapper, DatasourceVo, DatasourceEntity> {
 
+    /**
+     * 动态数据源
+     */
     @Resource
     private DynamicRoutingDataSource dataSource;
 
-    public List<TableDto> getTables() {
-        return baseMapper.getTables();
-    }
-
-    public List<ColumnDto> getColumns(TableDto table) {
-        return baseMapper.getColumns(table);
-    }
-
+    /**
+     * 切换数据源
+     *
+     * @param datasource 数据源
+     */
     public void switchDatasource(DatasourceVo datasource) {
         // 查询数据源是否存在
         boolean exists = baseMapper.exists(new QueryWrapper<DatasourceEntity>().eq(DatasourceEntity.COL_NAME, datasource.getName()));
@@ -46,5 +48,31 @@ public class DatasourceService extends BaseServiceImpl<DatasourceConverter, Data
         }
         // 切换数据源
         DynamicDataSourceContextHolder.push(datasource.getName());
+    }
+
+    /**
+     * 清除数据源
+     */
+    public void clearDatasource() {
+        DynamicDataSourceContextHolder.clear();
+    }
+
+    /**
+     * 获取所有表
+     *
+     * @return 表信息
+     */
+    public List<TableDto> getAllTables() {
+        return baseMapper.getAllTables();
+    }
+
+    /**
+     * 获取所有列
+     *
+     * @return 列信息
+     */
+    public Map<String, List<ColumnDto>> getAllColumns() {
+        List<ColumnDto> allColumns = baseMapper.getAllColumns();
+        return allColumns.stream().collect(Collectors.groupingBy(ColumnDto::getTableName));
     }
 }

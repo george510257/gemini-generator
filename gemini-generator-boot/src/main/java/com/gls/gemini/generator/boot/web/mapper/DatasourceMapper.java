@@ -13,7 +13,17 @@ import java.util.List;
  * @author george
  */
 public interface DatasourceMapper extends BaseMapper<DatasourceEntity> {
-    List<TableDto> getTables();
+    /**
+     * 获取所有表
+     *
+     * @return 表信息
+     */
+    List<TableDto> getAllTables();
 
-    List<ColumnDto> getColumns(TableDto table);
+    /**
+     * 获取所有列
+     *
+     * @return 列信息
+     */
+    List<ColumnDto> getAllColumns();
 }

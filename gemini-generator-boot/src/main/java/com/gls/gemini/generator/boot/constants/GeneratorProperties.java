@@ -6,6 +6,9 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
+/**
+ * 代码生成配置
+ */
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ConfigurationProperties(prefix = CommonConstants.BASE_PROPERTIES_PREFIX + ".generator")

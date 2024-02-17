@@ -4,6 +4,9 @@ import com.gls.gemini.common.core.interfaces.IEnums;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
+/**
+ * 数据类型枚举
+ */
 @Getter
 @RequiredArgsConstructor
 public enum DataTypeEnums implements IEnums {
