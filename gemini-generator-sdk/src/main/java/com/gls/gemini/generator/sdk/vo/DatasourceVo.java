@@ -1,7 +1,7 @@
-package com.gls.gemini.generator.boot.vo;
+package com.gls.gemini.generator.sdk.vo;
 
 import com.alibaba.excel.annotation.ExcelProperty;
-import com.gls.gemini.generator.boot.converter.DatasourceTypeConverter;
+import com.gls.gemini.generator.sdk.converter.DatasourceTypeConverter;
 import com.gls.gemini.sdk.core.vo.BaseVo;
 import com.gls.gemini.starter.excel.converter.StatusConverter;
 import io.swagger.v3.oas.annotations.media.Schema;

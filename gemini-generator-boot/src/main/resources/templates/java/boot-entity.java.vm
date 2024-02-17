@@ -22,23 +22,23 @@ public class ${entityNameUpper}Entity extends BaseEntity {
     @Serial
     private static final long serialVersionUID = 1L;
 
-#foreach($column in $columns)
-#if($column.fieldName != "id" &&
-    $column.fieldName != "tenantId" &&
-    $column.fieldName != "version" &&
-    $column.fieldName != "deleted" &&
-    $column.fieldName != "createUserId" &&
-    $column.fieldName != "createUserName" &&
-    $column.fieldName != "createTime" &&
-    $column.fieldName != "updateUserId" &&
-    $column.fieldName != "updateUserName" &&
-    $column.fieldName != "updateTime" )
-    public static final String COL_${column.columnNameUpper} = "${column.columnName}";
+    #foreach($column in $columns)
+        #if($column.fieldName != "id" &&
+            $column.fieldName != "tenantId" &&
+            $column.fieldName != "version" &&
+            $column.fieldName != "deleted" &&
+            $column.fieldName != "createUserId" &&
+            $column.fieldName != "createUserName" &&
+            $column.fieldName != "createTime" &&
+            $column.fieldName != "updateUserId" &&
+            $column.fieldName != "updateUserName" &&
+            $column.fieldName != "updateTime" )
+            public static final String COL_${column.columnNameUpper} = "${column.columnName}";
 
-    /**
-     * ${column.columnComment}
-     */
-    private ${column.fieldType} ${column.fieldName};
-#end
-#end
+            /**
+             * ${column.columnComment}
+             */
+            private ${column.fieldType} ${column.fieldName};
+        #end
+    #end
 }

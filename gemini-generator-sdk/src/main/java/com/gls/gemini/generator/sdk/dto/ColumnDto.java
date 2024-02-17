@@ -1,4 +1,4 @@
-package com.gls.gemini.generator.boot.dto;
+package com.gls.gemini.generator.sdk.dto;
 
 import lombok.Data;
 

@@ -4,7 +4,7 @@ import cn.hutool.core.io.FileUtil;
 import cn.hutool.core.util.ZipUtil;
 import com.gls.gemini.generator.boot.builder.CodeBuilder;
 import com.gls.gemini.generator.boot.constants.GeneratorProperties;
-import com.gls.gemini.generator.boot.vo.CodeVo;
+import com.gls.gemini.generator.sdk.vo.CodeVo;
 import jakarta.annotation.Resource;
 import org.springframework.stereotype.Service;
 

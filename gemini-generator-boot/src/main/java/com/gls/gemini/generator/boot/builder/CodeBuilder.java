@@ -6,7 +6,7 @@ import cn.hutool.extra.template.Template;
 import cn.hutool.extra.template.TemplateConfig;
 import cn.hutool.extra.template.TemplateUtil;
 import com.gls.gemini.generator.boot.constants.CodeEnums;
-import com.gls.gemini.generator.boot.vo.CodeVo;
+import com.gls.gemini.generator.sdk.vo.CodeVo;
 
 import java.io.File;
 import java.util.Map;

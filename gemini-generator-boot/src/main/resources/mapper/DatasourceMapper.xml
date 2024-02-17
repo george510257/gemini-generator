@@ -22,21 +22,19 @@
         <result column="create_time" property="createTime"/>
         <result column="update_time" property="updateTime"/>
     </resultMap>
-    <select id="getAllTables" resultType="com.gls.gemini.generator.boot.dto.TableDto">
-        SELECT
-        table_name tableName,
-        table_comment tableComment,
-        create_time createTime
+    <select id="getAllTables" resultType="com.gls.gemini.generator.sdk.dto.TableDto">
+        SELECT table_name    tableName,
+               table_comment tableComment,
+               create_time   createTime
         FROM information_schema.tables
         WHERE table_schema = (SELECT DATABASE())
     </select>
-    <select id="getAllColumns" resultType="com.gls.gemini.generator.boot.dto.ColumnDto">
-        SELECT
-        column_name columnName,
-        column_comment columnComment,
-        data_type dataType,
-        ordinal_position ordinalPosition,
-        table_name tableName
+    <select id="getAllColumns" resultType="com.gls.gemini.generator.sdk.dto.ColumnDto">
+        SELECT column_name      columnName,
+               column_comment   columnComment,
+               data_type        dataType,
+               ordinal_position ordinalPosition,
+               table_name       tableName
         FROM information_schema.columns
         WHERE table_schema = (SELECT DATABASE())
         ORDER BY ordinal_position

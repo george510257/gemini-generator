@@ -1,4 +1,4 @@
-package com.gls.gemini.generator.boot.vo;
+package com.gls.gemini.generator.sdk.vo;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;

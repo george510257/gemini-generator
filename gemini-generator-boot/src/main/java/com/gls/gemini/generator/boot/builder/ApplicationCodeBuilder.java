@@ -1,12 +1,12 @@
 package com.gls.gemini.generator.boot.builder;
 
 import com.gls.gemini.generator.boot.constants.CodeEnums;
-import com.gls.gemini.generator.boot.dto.TableDto;
-import com.gls.gemini.generator.boot.vo.CodeVo;
-import com.gls.gemini.generator.boot.vo.DatasourceVo;
-import com.gls.gemini.generator.boot.vo.MavenVo;
 import com.gls.gemini.generator.boot.web.converter.TemplateDataConverter;
 import com.gls.gemini.generator.boot.web.service.DatasourceService;
+import com.gls.gemini.generator.sdk.dto.TableDto;
+import com.gls.gemini.generator.sdk.vo.CodeVo;
+import com.gls.gemini.generator.sdk.vo.DatasourceVo;
+import com.gls.gemini.generator.sdk.vo.MavenVo;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;

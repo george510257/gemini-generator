@@ -1,9 +1,9 @@
 package com.gls.gemini.generator.boot.web.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.gls.gemini.generator.boot.dto.ColumnDto;
-import com.gls.gemini.generator.boot.dto.TableDto;
 import com.gls.gemini.generator.boot.web.entity.DatasourceEntity;
+import com.gls.gemini.generator.sdk.dto.ColumnDto;
+import com.gls.gemini.generator.sdk.dto.TableDto;
 
 import java.util.List;
 

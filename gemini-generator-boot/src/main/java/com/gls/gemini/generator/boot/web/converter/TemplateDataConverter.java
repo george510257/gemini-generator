@@ -5,10 +5,10 @@ import cn.hutool.core.date.DatePattern;
 import cn.hutool.core.date.DateUtil;
 import cn.hutool.core.util.StrUtil;
 import com.gls.gemini.generator.boot.constants.DataTypeEnums;
-import com.gls.gemini.generator.boot.dto.ColumnDto;
-import com.gls.gemini.generator.boot.dto.TableDto;
-import com.gls.gemini.generator.boot.vo.DatasourceVo;
-import com.gls.gemini.generator.boot.vo.MavenVo;
+import com.gls.gemini.generator.sdk.dto.ColumnDto;
+import com.gls.gemini.generator.sdk.dto.TableDto;
+import com.gls.gemini.generator.sdk.vo.DatasourceVo;
+import com.gls.gemini.generator.sdk.vo.MavenVo;
 import lombok.experimental.UtilityClass;
 
 import java.util.Date;

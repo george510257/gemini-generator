@@ -19,23 +19,23 @@ import lombok.EqualsAndHashCode;
 @Schema(title = "${entityName}", description = "${tableComment}Vo")
 public class ${entityNameUpper}Vo extends BaseVo {
 
-#foreach($column in $columns)
-#if($column.fieldName != "id" &&
-    $column.fieldName != "tenantId" &&
-    $column.fieldName != "version" &&
-    $column.fieldName != "deleted" &&
-    $column.fieldName != "createUserId" &&
-    $column.fieldName != "createUserName" &&
-    $column.fieldName != "createTime" &&
-    $column.fieldName != "updateUserId" &&
-    $column.fieldName != "updateUserName" &&
-    $column.fieldName != "updateTime" )
-    /**
-     * ${column.columnComment}
-     */
-    @ExcelProperty(value = "${column.columnComment}")
-    @Schema(title = "${column.columnComment}", description = "${column.columnComment}")
-    private ${column.fieldType} ${column.fieldName};
-#end
-#end
+    #foreach($column in $columns)
+        #if($column.fieldName != "id" &&
+            $column.fieldName != "tenantId" &&
+            $column.fieldName != "version" &&
+            $column.fieldName != "deleted" &&
+            $column.fieldName != "createUserId" &&
+            $column.fieldName != "createUserName" &&
+            $column.fieldName != "createTime" &&
+            $column.fieldName != "updateUserId" &&
+            $column.fieldName != "updateUserName" &&
+            $column.fieldName != "updateTime" )
+            /**
+             * ${column.columnComment}
+             */
+            @ExcelProperty(value = "${column.columnComment}")
+            @Schema(title = "${column.columnComment}", description = "${column.columnComment}")
+            private ${column.fieldType} ${column.fieldName};
+        #end
+    #end
 }

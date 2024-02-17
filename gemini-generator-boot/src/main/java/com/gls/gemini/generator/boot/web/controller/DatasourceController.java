@@ -1,8 +1,8 @@
 package com.gls.gemini.generator.boot.web.controller;
 
 import com.gls.gemini.boot.core.base.BaseController;
-import com.gls.gemini.generator.boot.vo.DatasourceVo;
 import com.gls.gemini.generator.boot.web.service.DatasourceService;
+import com.gls.gemini.generator.sdk.vo.DatasourceVo;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.RequestMapping;

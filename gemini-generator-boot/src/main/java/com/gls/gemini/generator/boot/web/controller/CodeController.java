@@ -2,9 +2,9 @@ package com.gls.gemini.generator.boot.web.controller;
 
 import cn.hutool.core.io.FileUtil;
 import cn.hutool.core.io.IoUtil;
-import com.gls.gemini.generator.boot.vo.CodeVo;
 import com.gls.gemini.generator.boot.web.service.CodeService;
 import com.gls.gemini.generator.boot.web.service.DatasourceService;
+import com.gls.gemini.generator.sdk.vo.CodeVo;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.annotation.Resource;
