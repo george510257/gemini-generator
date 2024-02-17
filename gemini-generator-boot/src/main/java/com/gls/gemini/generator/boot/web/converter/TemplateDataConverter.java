@@ -82,8 +82,8 @@ public class TemplateDataConverter {
         templateData.put("fieldName", fieldName);
         // fieldNameUpper 例如：UserId
         templateData.put("fieldNameUpper", StrUtil.upperFirst(fieldName));
-        // fieldNameUpperAll 例如：USER_ID
-        templateData.put("fieldNameUpperAll", fieldName.toUpperCase());
+        // columnNameUpper 例如：USER_ID
+        templateData.put("columnNameUpper", columnDto.getColumnName().toUpperCase());
         // fieldType 例如：Long
         templateData.put("fieldType", convertFieldType(columnDto.getDataType()));
         return templateData;

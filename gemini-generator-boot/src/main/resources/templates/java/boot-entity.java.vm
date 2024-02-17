@@ -19,25 +19,26 @@ import java.io.Serial;
 @TableName("${tableName}")
 public class ${entityNameUpper}Entity extends BaseEntity {
 
-    public static final String COL_NAME = "name";
-    public static final String COL_DESCRIPTION = "description";
-    public static final String COL_STATUS = "status";
-
     @Serial
     private static final long serialVersionUID = 1L;
 
-    /**
-     * 名称
-     */
-    private String name;
+#foreach($column in $columns)
+#if($column.fieldName != "id" &&
+    $column.fieldName != "tenantId" &&
+    $column.fieldName != "version" &&
+    $column.fieldName != "deleted" &&
+    $column.fieldName != "createUserId" &&
+    $column.fieldName != "createUserName" &&
+    $column.fieldName != "createTime" &&
+    $column.fieldName != "updateUserId" &&
+    $column.fieldName != "updateUserName" &&
+    $column.fieldName != "updateTime" )
+    public static final String COL_${column.columnNameUpper} = "${column.columnName}";
 
     /**
-     * 描述
+     * ${column.columnComment}
      */
-    private String description;
-
-    /**
-     * 状态 0:正常 1:禁用
-     */
-    private Integer status;
+    private ${column.fieldType} ${column.fieldName};
+#end
+#end
 }
