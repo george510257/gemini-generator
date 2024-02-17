@@ -21,6 +21,8 @@ public class CodeService {
 
     @Resource
     private List<CodeBuilder> codeBuilders;
+    @Resource
+    private DatasourceService datasourceService;
 
     /**
      * 生成代码
@@ -31,6 +33,8 @@ public class CodeService {
     public File generate(CodeVo codeVo) {
         // 创建临时文件夹
         File root = this.getRootPath(codeVo.getMaven().getArtifactId());
+        // 切换数据源
+        datasourceService.switchDatasource(codeVo.getDatasource());
         // 生成代码
         codeBuilders.forEach(codeBuilder -> codeBuilder.createFile(root, codeVo));
         // 压缩文件

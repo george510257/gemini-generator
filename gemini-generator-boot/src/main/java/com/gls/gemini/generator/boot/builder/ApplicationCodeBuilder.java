@@ -15,24 +15,41 @@ import java.io.File;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * 应用级代码生成
+ */
 @Slf4j
 @Component
 public class ApplicationCodeBuilder implements CodeBuilder {
+    /**
+     * 数据源服务
+     */
     @Resource
     private DatasourceService datasourceService;
 
     @Override
     public void createFile(File root, CodeVo codeVo) {
+        // 获取maven信息
         MavenVo maven = codeVo.getMaven();
+        // 获取数据源信息
         DatasourceVo datasource = codeVo.getDatasource();
-        List<TableDto> tables = datasourceService.getTables(datasource);
-
+        // 获取表信息
+        List<TableDto> tables = datasourceService.getTables();
+        // 获取模板数据
         Map<String, Object> templateData = TemplateDataConverter.convert(maven, datasource, tables);
         log.info("templateData: {}", templateData);
-        createFile(root, templateData, CodeEnums.PARENT_POM);
-        createFile(root, templateData, CodeEnums.BOOT_POM);
-        createFile(root, templateData, CodeEnums.BOOT_APPLICATION);
-        createFile(root, templateData, CodeEnums.BOOT_APPLICATION_YML);
-        createFile(root, templateData, CodeEnums.SDK_POM);
+
+        // 生成文件 - 父pom
+        this.createFile(root, templateData, CodeEnums.PARENT_POM);
+
+        // 生成文件 - boot pom
+        this.createFile(root, templateData, CodeEnums.BOOT_POM);
+        // 生成文件 - boot application
+        this.createFile(root, templateData, CodeEnums.BOOT_APPLICATION);
+        // 生成文件 - boot application yml
+        this.createFile(root, templateData, CodeEnums.BOOT_APPLICATION_YML);
+
+        // 生成文件 - sdk pom
+        this.createFile(root, templateData, CodeEnums.SDK_POM);
     }
 }
