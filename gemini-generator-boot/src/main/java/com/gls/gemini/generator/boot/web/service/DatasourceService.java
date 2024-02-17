@@ -26,7 +26,7 @@ import java.util.List;
 public class DatasourceService extends BaseServiceImpl<DatasourceConverter, DatasourceMapper, DatasourceVo, DatasourceEntity> {
 
     @Resource
-    private DynamicRoutingDataSource dynamicRoutingDataSource;
+    private DynamicRoutingDataSource dataSource;
 
     public List<TableDto> getTables() {
         return baseMapper.getTables();
@@ -42,7 +42,7 @@ public class DatasourceService extends BaseServiceImpl<DatasourceConverter, Data
         if (!exists) {
             log.error("数据源不存在: {}", datasource);
             this.insert(datasource);
-            dynamicRoutingDataSource.afterPropertiesSet();
+            dataSource.afterPropertiesSet();
         }
         // 切换数据源
         DynamicDataSourceContextHolder.push(datasource.getName());

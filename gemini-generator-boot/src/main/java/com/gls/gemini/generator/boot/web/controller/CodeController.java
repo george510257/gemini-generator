@@ -5,12 +5,12 @@ import cn.hutool.core.io.IoUtil;
 import com.gls.gemini.generator.boot.vo.CodeVo;
 import com.gls.gemini.generator.boot.web.service.CodeService;
 import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.annotation.Resource;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -32,10 +32,9 @@ public class CodeController {
      * @param codeVo   代码生成信息
      * @param response 响应
      */
-    @PostMapping(value = "/generate", consumes = "application/json", produces = "application/octet-stream")
+    @PostMapping("/generate")
     @Operation(summary = "生成代码", description = "生成代码")
-    @Parameter(name = "codeVo", description = "代码生成信息", required = true)
-    public void generate(CodeVo codeVo, HttpServletResponse response) throws IOException {
+    public void generate(@RequestBody CodeVo codeVo, HttpServletResponse response) throws IOException {
         log.info("generate code: {}", codeVo);
         // 生成代码
         File file = codeService.generate(codeVo);
@@ -50,6 +49,6 @@ public class CodeController {
         InputStream inputStream = FileUtil.getInputStream(file);
         IoUtil.copy(inputStream, response.getOutputStream());
         // 删除临时文件
-        FileUtil.del(file);
+//        FileUtil.del(file);
     }
 }
