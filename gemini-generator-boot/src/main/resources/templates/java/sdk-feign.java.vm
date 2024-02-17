@@ -5,7 +5,11 @@ import ${groupId}.sdk.vo.${entityNameUpper}Vo;
 import org.springframework.cloud.openfeign.FeignClient;
 
 /**
- * ${entityName} feign
+ * ${tableComment} Feign
+ *
+ * @author gemini 自动生成
+ * @version ${version}
+ * @date ${dateTime}
  */
 @FeignClient(name = "${artifactId}", contextId = "${entityName}", path = "/${entityName}")
 public interface ${entityNameUpper}Feign extends BaseFeign<${entityNameUpper}Vo> {

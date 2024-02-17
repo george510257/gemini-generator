@@ -2,15 +2,20 @@ package ${groupId}.sdk.vo;
 
 import com.alibaba.excel.annotation.ExcelProperty;
 import com.gls.gemini.sdk.core.vo.BaseVo;
-import ${groupId}.sdk.excel.converter.StatusConverter;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
-
+/**
+ * ${tableComment} Vo
+ *
+ * @author gemini 自动生成
+ * @version ${version}
+ * @date ${dateTime}
+ */
 @Data
 @EqualsAndHashCode(callSuper = true)
-@Schema(title = "${entityName}", description = "${entityDescription}Vo")
+@Schema(title = "${entityName}", description = "${tableComment}Vo")
 public class ${entityNameUpper}Vo extends BaseVo {
 
     @ExcelProperty(value = "名称")

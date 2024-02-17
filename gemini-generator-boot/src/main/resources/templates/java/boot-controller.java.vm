@@ -8,9 +8,16 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * ${tableComment} 控制器
+ *
+ * @author gemini 自动生成
+ * @version ${version}
+ * @date ${dateTime}
+ */
 @Slf4j
 @RestController
 @RequestMapping("/${entityName}")
-@Tag(name = "${entityName}", description = "样例")
+@Tag(name = "${entityName}", description = "${tableComment}")
 public class ${entityNameUpper}Controller extends BaseController<${entityNameUpper}Service, ${entityNameUpper}Vo> {
 }

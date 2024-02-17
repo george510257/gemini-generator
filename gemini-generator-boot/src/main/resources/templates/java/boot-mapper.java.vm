@@ -3,5 +3,12 @@ package ${groupId}.boot.web.mapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import ${groupId}.boot.web.entity.${entityNameUpper}Entity;
 
+/**
+ * ${tableComment} Mapper
+ *
+ * @author gemini 自动生成
+ * @version ${version}
+ * @date ${dateTime}
+ */
 public interface ${entityNameUpper}Mapper extends BaseMapper<${entityNameUpper}Entity> {
 }

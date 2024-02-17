@@ -8,8 +8,12 @@ import lombok.EqualsAndHashCode;
 import java.io.Serial;
 
 /**
-*
-*/
+ * ${tableComment} 实体类
+ *
+ * @author gemini 自动生成
+ * @version ${version}
+ * @date ${dateTime}
+ */
 @Data
 @EqualsAndHashCode(callSuper = true)
 @TableName("${tableName}")

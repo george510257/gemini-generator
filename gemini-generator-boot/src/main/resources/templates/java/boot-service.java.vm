@@ -7,6 +7,13 @@ import ${groupId}.boot.web.mapper.${entityNameUpper}Mapper;
 import ${groupId}.sdk.vo.${entityNameUpper}Vo;
 import org.springframework.stereotype.Service;
 
+/**
+ * ${tableComment} 服务实现类
+ *
+ * @author gemini 自动生成
+ * @version ${version}
+ * @date ${dateTime}
+ */
 @Service
 public class ${entityNameUpper}Service extends BaseServiceImpl<${entityNameUpper}Converter, ${entityNameUpper}Mapper, ${entityNameUpper}Vo, ${entityNameUpper}Entity> {
 }
