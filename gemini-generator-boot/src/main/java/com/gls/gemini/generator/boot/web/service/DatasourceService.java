@@ -1,5 +1,6 @@
 package com.gls.gemini.generator.boot.web.service;
 
+import com.gls.gemini.generator.boot.dto.TableDto;
 import com.gls.gemini.generator.boot.vo.DatasourceVo;
 import com.gls.gemini.generator.boot.web.converter.DatasourceConverter;
 import com.gls.gemini.generator.boot.web.entity.DatasourceEntity;
@@ -7,6 +8,8 @@ import com.gls.gemini.generator.boot.web.mapper.DatasourceMapper;
 import com.gls.gemini.starter.mybatis.base.BaseServiceImpl;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * 数据源管理 service
@@ -16,4 +19,8 @@ import org.springframework.stereotype.Service;
 @Slf4j
 @Service
 public class DatasourceService extends BaseServiceImpl<DatasourceConverter, DatasourceMapper, DatasourceVo, DatasourceEntity> {
+
+    public List<TableDto> getTables(DatasourceVo datasource) {
+        return null;
+    }
 }

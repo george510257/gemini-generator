@@ -108,4 +108,13 @@ public enum DataTypeEnums implements IEnums {
      * java数据类型
      */
     private final String javaDataType;
+
+    public static DataTypeEnums getByDbDataType(String dbDataType) {
+        for (DataTypeEnums value : values()) {
+            if (value.getDbDataType().equalsIgnoreCase(dbDataType)) {
+                return value;
+            }
+        }
+        return UNKNOWN;
+    }
 }
