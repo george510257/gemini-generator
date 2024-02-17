@@ -7,13 +7,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * ${name}启动类
  */
 @SpringBootApplication
-public class ${nameUpper}BootApplication {
+public class ${appNameUpper}BootApplication {
     /**
      * ${name}启动入口
      *
      * @param args 启动参数
      */
     public static void main(String[] args) {
-        SpringApplication.run(${nameUpper}BootApplication.class, args);
+        SpringApplication.run(${appNameUpper}BootApplication.class, args);
     }
 }

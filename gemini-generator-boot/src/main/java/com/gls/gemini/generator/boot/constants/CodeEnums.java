@@ -21,7 +21,7 @@ public enum CodeEnums implements IEnums {
     /**
      * boot项目Application.java
      */
-    BOOT_APPLICATION(3, "boot项目Application.java", "/java/boot-application.java.vm", "/{artifactId}/{artifactId}-boot/src/main/java/{packagePath}/boot/{nameUpper}BootApplication.java"),
+    BOOT_APPLICATION(3, "boot项目Application.java", "/java/boot-application.java.vm", "/{artifactId}/{artifactId}-boot/src/main/java/{packagePath}/boot/{appNameUpper}BootApplication.java"),
     /**
      * boot项目application.yml
      */
