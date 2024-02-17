@@ -19,9 +19,11 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 /**
- * 数据源管理 service
+ * 数据源表 服务实现类
  *
- * @author george
+ * @author gemini 自动生成
+ * @version 0.0.1-SNAPSHOT
+ * @date 2024-02-17
  */
 @Slf4j
 @Service

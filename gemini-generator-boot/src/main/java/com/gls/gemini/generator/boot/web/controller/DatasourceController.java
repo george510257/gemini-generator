@@ -9,13 +9,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * 数据源管理 controller
+ * 数据源表 控制器
  *
- * @author george
+ * @author gemini 自动生成
+ * @version 0.0.1-SNAPSHOT
+ * @date 2024-02-17
  */
 @Slf4j
 @RestController
 @RequestMapping("/datasource")
-@Tag(name = "数据源管理", description = "数据源管理")
+@Tag(name = "datasource", description = "数据源表")
 public class DatasourceController extends BaseController<DatasourceService, DatasourceVo> {
 }

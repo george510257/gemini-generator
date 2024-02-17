@@ -18,5 +18,4 @@
             <artifactId>gemini-sdk-core</artifactId>
         </dependency>
     </dependencies>
-
 </project>

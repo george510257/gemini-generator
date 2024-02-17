@@ -8,9 +8,11 @@ import lombok.EqualsAndHashCode;
 import java.io.Serial;
 
 /**
- * 数据源管理 实体
+ * 数据源表 实体类
  *
- * @author george
+ * @author gemini 自动生成
+ * @version 0.0.1-SNAPSHOT
+ * @date 2024-02-17
  */
 @Data
 @EqualsAndHashCode(callSuper = true)
@@ -25,15 +27,14 @@ public class DatasourceEntity extends BaseEntity {
     public static final String COL_TYPE = "type";
     public static final String COL_DESCRIPTION = "description";
     public static final String COL_STATUS = "status";
-
     @Serial
     private static final long serialVersionUID = 1L;
     /**
-     * 名称
+     * 数据源名称
      */
     private String name;
     /**
-     * URL
+     * 数据源url
      */
     private String url;
     /**
@@ -49,16 +50,15 @@ public class DatasourceEntity extends BaseEntity {
      */
     private String driverClassName;
     /**
-     * 类型 0:mysql 1:oracle 2:sqlserver 3:postgresql
+     * 数据源类型 0:MySQL 1:Oracle 2:SQLServer 3:PostgreSQL
      */
-    private Integer type;
+    private Boolean type;
     /**
      * 描述
      */
     private String description;
     /**
-     * 状态 0:正常 1:禁用
+     * 状态 0:禁用 1:启用
      */
-    private Integer status;
-
+    private Boolean status;
 }

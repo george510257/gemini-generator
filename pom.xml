@@ -11,11 +11,14 @@
 
     <groupId>com.gls.gemini.generator</groupId>
     <artifactId>gemini-generator</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
+
+    <name>Gemini Generator</name>
+    <description>代码生成器</description>
+
     <modules>
         <module>gemini-generator-boot</module>
         <module>gemini-generator-sdk</module>
     </modules>
-
-
 </project>

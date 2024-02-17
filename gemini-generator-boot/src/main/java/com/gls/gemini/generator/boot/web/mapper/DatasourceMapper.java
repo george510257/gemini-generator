@@ -8,9 +8,11 @@ import com.gls.gemini.generator.sdk.dto.TableDto;
 import java.util.List;
 
 /**
- * 数据源管理 Mapper
+ * 数据源表 Mapper
  *
- * @author george
+ * @author gemini 自动生成
+ * @version 0.0.1-SNAPSHOT
+ * @date 2024-02-17
  */
 public interface DatasourceMapper extends BaseMapper<DatasourceEntity> {
     /**

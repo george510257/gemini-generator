@@ -8,9 +8,11 @@ import org.mapstruct.MappingConstants;
 import org.mapstruct.NullValuePropertyMappingStrategy;
 
 /**
- * 数据源管理 转换器
+ * 数据源表 转换器
  *
- * @author george
+ * @author gemini 自动生成
+ * @version 0.0.1-SNAPSHOT
+ * @date 2024-02-17
  */
 @Mapper(componentModel = MappingConstants.ComponentModel.SPRING,
         nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
