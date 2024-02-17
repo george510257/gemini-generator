@@ -1,6 +1,7 @@
 package com.gls.gemini.generator.boot.web.converter;
 
 import cn.hutool.core.bean.BeanUtil;
+import cn.hutool.core.date.DatePattern;
 import cn.hutool.core.date.DateUtil;
 import cn.hutool.core.util.StrUtil;
 import com.gls.gemini.generator.boot.constants.DataTypeEnums;
@@ -35,7 +36,7 @@ public class TemplateDataConverter {
         templateData.putAll(convert(maven));
         templateData.putAll(convert(datasource));
         templateData.put("tables", convertTables(tables, tablePrefix));
-        templateData.put("dateTime", DateUtil.format(new Date(), "yyyy-MM-dd HH:mm:ss"));
+        templateData.put("date", DateUtil.format(new Date(), DatePattern.NORM_DATE_PATTERN));
         return templateData;
     }
 
@@ -54,7 +55,7 @@ public class TemplateDataConverter {
         templateData.putAll(convert(datasource));
         templateData.putAll(convert(table, tablePrefix));
         templateData.put("columns", convertColumns(columns));
-        templateData.put("dateTime", DateUtil.format(new Date(), "yyyy-MM-dd HH:mm:ss"));
+        templateData.put("date", DateUtil.format(new Date(), DatePattern.NORM_DATE_PATTERN));
         return templateData;
     }
 

@@ -2,6 +2,7 @@ package ${groupId}.sdk.vo;
 
 import com.alibaba.excel.annotation.ExcelProperty;
 import com.gls.gemini.sdk.core.vo.BaseVo;
+import com.gls.gemini.starter.excel.converter.StatusConverter;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -11,7 +12,7 @@ import lombok.EqualsAndHashCode;
  *
  * @author gemini 自动生成
  * @version ${version}
- * @date ${dateTime}
+ * @date ${date}
  */
 @Data
 @EqualsAndHashCode(callSuper = true)

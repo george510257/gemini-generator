@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
  *
  * @author gemini 自动生成
  * @version ${version}
- * @date ${dateTime}
+ * @date ${date}
  */
 @Slf4j
 @RestController

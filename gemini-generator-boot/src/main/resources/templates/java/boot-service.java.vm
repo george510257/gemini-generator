@@ -5,6 +5,7 @@ import ${groupId}.boot.web.converter.${entityNameUpper}Converter;
 import ${groupId}.boot.web.entity.${entityNameUpper}Entity;
 import ${groupId}.boot.web.mapper.${entityNameUpper}Mapper;
 import ${groupId}.sdk.vo.${entityNameUpper}Vo;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 /**
@@ -12,8 +13,9 @@ import org.springframework.stereotype.Service;
  *
  * @author gemini 自动生成
  * @version ${version}
- * @date ${dateTime}
+ * @date ${date}
  */
+@Slf4j
 @Service
 public class ${entityNameUpper}Service extends BaseServiceImpl<${entityNameUpper}Converter, ${entityNameUpper}Mapper, ${entityNameUpper}Vo, ${entityNameUpper}Entity> {
 }
