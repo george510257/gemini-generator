@@ -2,11 +2,22 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="${groupId}.boot.web.mapper.${entityNameUpper}Mapper">
 
-    <resultMap id="${entityName}_map" type="${groupId}.boot.web.entity.${entityNameUpper}Entity">
+    <resultMap id="${entityName}ResultMap" type="${groupId}.boot.web.entity.${entityNameUpper}Entity">
         <id column="id" property="id"/>
-        <result column="name" property="name"/>
-        <result column="description" property="description"/>
-        <result column="status" property="status"/>
+    #foreach($column in $columns)
+    #if($column.fieldName != "id" &&
+        $column.fieldName != "tenantId" &&
+        $column.fieldName != "version" &&
+        $column.fieldName != "deleted" &&
+        $column.fieldName != "createUserId" &&
+        $column.fieldName != "createUserName" &&
+        $column.fieldName != "createTime" &&
+        $column.fieldName != "updateUserId" &&
+        $column.fieldName != "updateUserName" &&
+        $column.fieldName != "updateTime" )
+        <result column="${column.columnName}" property="${column.fieldName}"/>
+    #end
+    #end
         <result column="tenant_id" property="tenantId"/>
         <result column="version" property="version"/>
         <result column="deleted" property="deleted"/>
@@ -17,5 +28,12 @@
         <result column="create_time" property="createTime"/>
         <result column="update_time" property="updateTime"/>
     </resultMap>
+
+    <sql id="${entityName}Sql">
+    #foreach($column in $columns)
+        #if($foreach.hasNext)${column.columnName},#else${column.columnName}#end
+    #end
+
+    </sql>
 
 </mapper>
