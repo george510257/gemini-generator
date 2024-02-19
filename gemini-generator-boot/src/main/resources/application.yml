@@ -40,7 +40,7 @@ gemini:
     datasource:
       provider:
         enabled: true
-        query-ds-sql: "select * from t_datasource where status = 0 and deleted = 0"
+        query-ds-sql: "select * from t_datasource where status = 1 and deleted = 0"
   mybatis:
     tenant:
       ignore-table:
