@@ -47,6 +47,8 @@ public class ApplicationCodeBuilder implements CodeBuilder {
 
         // 生成文件 - 父pom
         this.createFile(root, templateData, CodeEnums.PARENT_POM);
+        this.createFile(root, templateData, CodeEnums.GIT_IGNORE);
+        this.createFile(root, templateData, CodeEnums.README_MD);
 
         // 生成文件 - boot pom
         this.createFile(root, templateData, CodeEnums.BOOT_POM);

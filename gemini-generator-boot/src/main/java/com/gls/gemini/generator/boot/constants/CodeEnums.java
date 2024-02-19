@@ -61,7 +61,16 @@ public enum CodeEnums implements IEnums {
     /**
      * sdk项目FeignClient.java
      */
-    SDK_FEIGN(13, "sdk项目FeignClient.java", "/java/sdk-feign.java.vm", "/{artifactId}/{artifactId}-sdk/src/main/java/{packagePath}/sdk/feign/{entityNameUpper}Feign.java");
+    SDK_FEIGN(13, "sdk项目FeignClient.java", "/java/sdk-feign.java.vm", "/{artifactId}/{artifactId}-sdk/src/main/java/{packagePath}/sdk/feign/{entityNameUpper}Feign.java"),
+    /**
+     * .gitignore配置文件
+     */
+    GIT_IGNORE(14, ".gitignore配置文件", "/resources/gitignore.vm", "/{artifactId}/.gitignore"),
+    /**
+     * README.md配置文件
+     */
+    README_MD(15, "README.md配置文件", "/resources/readme.md.vm", "/{artifactId}/README.md"),
+    ;
 
     /**
      * 编码
