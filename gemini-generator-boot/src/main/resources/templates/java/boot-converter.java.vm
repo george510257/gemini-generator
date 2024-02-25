@@ -12,7 +12,6 @@ import org.mapstruct.NullValuePropertyMappingStrategy;
  *
  * @author gemini 自动生成
  * @version ${version}
- * @date ${date}
  */
 @Mapper(componentModel = MappingConstants.ComponentModel.SPRING,
         nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)

@@ -8,7 +8,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *
  * @author gemini 自动生成
  * @version ${version}
- * @date ${date}
  */
 @SpringBootApplication
 public class ${appNameUpper}BootApplication {

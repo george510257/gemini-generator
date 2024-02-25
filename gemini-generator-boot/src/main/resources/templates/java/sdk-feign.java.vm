@@ -9,7 +9,6 @@ import org.springframework.cloud.openfeign.FeignClient;
  *
  * @author gemini 自动生成
  * @version ${version}
- * @date ${date}
  */
 @FeignClient(name = "${artifactId}", contextId = "${entityName}", path = "/${entityName}")
 public interface ${entityNameUpper}Feign extends BaseFeign<${entityNameUpper}Vo> {

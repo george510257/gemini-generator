@@ -13,7 +13,6 @@ import org.springframework.stereotype.Service;
  *
  * @author gemini 自动生成
  * @version ${version}
- * @date ${date}
  */
 @Slf4j
 @Service

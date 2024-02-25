@@ -8,7 +8,6 @@ import ${groupId}.boot.web.entity.${entityNameUpper}Entity;
  *
  * @author gemini 自动生成
  * @version ${version}
- * @date ${date}
  */
 public interface ${entityNameUpper}Mapper extends BaseMapper<${entityNameUpper}Entity> {
 }
