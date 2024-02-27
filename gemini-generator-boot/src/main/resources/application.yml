@@ -46,3 +46,5 @@ gemini:
       ignore-table:
         - "tables"
         - "columns"
+server:
+  port: 8081
