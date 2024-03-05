@@ -11,89 +11,107 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public enum DataTypeEnums implements IEnums {
     /**
-     * 字符串
+     * 未知
      */
-    STRING(1, "字符串", "varchar", "String"),
+    UNKNOWN(0, "未知", "unknown", "Object"),
     /**
-     * 整型
+     * 小整数
      */
-    INTEGER(2, "整型", "int", "Integer"),
+    TINYINT(1, "小整数", "tinyint", "Integer"),
     /**
-     * 长整型
+     * 中整数
      */
-    LONG(3, "长整型", "bigint", "Long"),
+    SMALLINT(2, "中整数", "smallint", "Integer"),
     /**
-     * 浮点型
+     * 中整数
      */
-    FLOAT(4, "浮点型", "float", "Float"),
+    MEDIUMINT(3, "中整数", "mediumint", "Integer"),
     /**
-     * 双精度浮点型
+     * 整数
      */
-    DOUBLE(5, "双精度浮点型", "double", "Double"),
+    INT(4, "整数", "int", "Integer"),
+    /**
+     * 整数
+     */
+    INTEGER(5, "整数", "integer", "Integer"),
+    /**
+     * 大整数
+     */
+    BIGINT(6, "大整数", "bigint", "Long"),
+    /**
+     * 浮点数
+     */
+    FLOAT(7, "浮点数", "float", "Float"),
+    /**
+     * 双精度浮点数
+     */
+    DOUBLE(8, "双精度浮点数", "double", "Double"),
+    /**
+     * 小数
+     */
+    DECIMAL(9, "小数", "decimal", "BigDecimal"),
     /**
      * 日期
      */
-    DATE(6, "日期", "datetime", "Date"),
+    DATE(10, "日期", "date", "Date"),
     /**
      * 时间
      */
-    TIME(7, "时间", "time", "Time"),
+    TIME(11, "时间", "time", "Time"),
+    /**
+     * 年
+     */
+    YEAR(12, "年", "year", "String"),
+    /**
+     * 日期时间
+     */
+    DATETIME(13, "日期时间", "datetime", "Date"),
     /**
      * 时间戳
      */
-    TIMESTAMP(8, "时间戳", "timestamp", "Timestamp"),
+    TIMESTAMP(14, "时间戳", "timestamp", "Date"),
     /**
-     * 布尔
+     * 字符串
      */
-    BOOLEAN(9, "布尔", "tinyint", "Boolean"),
+    CHAR(15, "字符串", "char", "String"),
     /**
-     * 字节
+     * 字符串
      */
-    BYTE(10, "字节", "tinyint", "Byte"),
+    VARCHAR(16, "字符串", "varchar", "String"),
     /**
-     * 字节数组
+     * 二进制字符串
      */
-    BYTE_ARRAY(11, "字节数组", "blob", "byte[]"),
+    TINYBLOB(17, "二进制字符串", "tinyblob", "byte[]"),
     /**
-     * 大文本
+     * 短文本
      */
-    TEXT(12, "大文本", "text", "String"),
+    TINYTEXT(18, "短文本", "tinytext", "String"),
     /**
-     * 二进制
+     * 二进制字符串
      */
-    BINARY(13, "二进制", "binary", "byte[]"),
+    BLOB(19, "二进制字符串", "blob", "byte[]"),
     /**
-     * 二进制大对象
+     * 文本
      */
-    BLOB(14, "二进制大对象", "blob", "byte[]"),
+    TEXT(20, "文本", "text", "String"),
     /**
-     * 字符串大对象
+     * 二进制字符串
      */
-    CLOB(15, "字符串大对象", "clob", "String"),
+    MEDIUMBLOB(21, "二进制字符串", "mediumblob", "byte[]"),
     /**
-     * 数组
+     * 长文本
      */
-    ARRAY(16, "数组", "array", "List"),
+    MEDIUMTEXT(22, "长文本", "mediumtext", "String"),
     /**
-     * 对象
+     * 二进制字符串
      */
-    OBJECT(17, "对象", "object", "Object"),
+    LONGBLOB(23, "二进制字符串", "longblob", "byte[]"),
     /**
-     * JSON
+     * 长文本
      */
-    JSON(18, "JSON", "json", "String"),
-    /**
-     * XML
-     */
-    XML(19, "XML", "xml", "String"),
-    /**
-     * 枚举
-     */
-    ENUM(20, "枚举", "enum", "Enum"),
-    /**
-     * 未知
-     */
-    UNKNOWN(21, "未知", "unknown", "Object");
+    LONGTEXT(24, "长文本", "longtext", "String"),
+
+    ;
 
     /**
      * 编码
