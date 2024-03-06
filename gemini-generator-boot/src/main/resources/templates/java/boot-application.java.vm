@@ -4,7 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * ${name}启动类
+ * ${name} 启动类
  *
  * @author gemini 自动生成
  * @version ${version}
