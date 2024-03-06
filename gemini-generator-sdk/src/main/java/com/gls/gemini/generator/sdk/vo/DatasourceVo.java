@@ -52,7 +52,7 @@ public class DatasourceVo extends BaseVo {
      */
     @ExcelProperty(value = "数据源类型 0:MySQL 1:Oracle 2:SQLServer 3:PostgreSQL")
     @Schema(title = "数据源类型 0:MySQL 1:Oracle 2:SQLServer 3:PostgreSQL", description = "数据源类型 0:MySQL 1:Oracle 2:SQLServer 3:PostgreSQL")
-    private Boolean type;
+    private Integer type;
     /**
      * 描述
      */
@@ -64,5 +64,5 @@ public class DatasourceVo extends BaseVo {
      */
     @ExcelProperty(value = "状态 0:禁用 1:启用")
     @Schema(title = "状态 0:禁用 1:启用", description = "状态 0:禁用 1:启用")
-    private Boolean status;
+    private Integer status;
 }

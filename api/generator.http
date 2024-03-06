@@ -1,0 +1,91 @@
+### 代码生成器 generator
+POST http://localhost:8081/code/generate
+Content-Type: application/json
+
+{
+  "maven": {
+    "groupId": "com.gls.gemini.generator",
+    "artifactId": "gemini-generator",
+    "version": "0.0.1-SNAPSHOT",
+    "name": "Gemini Generator",
+    "description": "代码生成器服务",
+    "parentVersion": "0.0.1-SNAPSHOT"
+  },
+  "datasource": {
+    "name": "generator",
+    "url": "jdbc:mysql://docker-server:3306/gemini_generator?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC",
+    "username": "root",
+    "password": "root",
+    "driverClassName": "com.mysql.cj.jdbc.Driver"
+  },
+  "tablePrefix": "t_"
+}
+
+### 代码生成器 gateway
+POST http://localhost:8081/code/generate
+Content-Type: application/json
+
+{
+  "maven": {
+    "groupId": "com.gls.gemini.gateway",
+    "artifactId": "gemini-gateway",
+    "version": "0.0.1-SNAPSHOT",
+    "name": "Gemini Gateway",
+    "description": "网关服务",
+    "parentVersion": "0.0.1-SNAPSHOT"
+  },
+  "datasource": {
+    "name": "gateway",
+    "url": "jdbc:mysql://docker-server:3306/gemini_gateway?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC",
+    "username": "root",
+    "password": "root",
+    "driverClassName": "com.mysql.cj.jdbc.Driver"
+  },
+  "tablePrefix": "t_"
+}
+
+### 代码生成器 uaa
+POST http://localhost:8081/code/generate
+Content-Type: application/json
+
+{
+  "maven": {
+    "groupId": "com.gls.gemini.uaa",
+    "artifactId": "gemini-uaa",
+    "version": "0.0.1-SNAPSHOT",
+    "name": "Gemini UAA",
+    "description": "认证授权服务",
+    "parentVersion": "0.0.1-SNAPSHOT"
+  },
+  "datasource": {
+    "name": "uaa",
+    "url": "jdbc:mysql://docker-server:3306/gemini_uaa?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC",
+    "username": "root",
+    "password": "root",
+    "driverClassName": "com.mysql.cj.jdbc.Driver"
+  },
+  "tablePrefix": "t_"
+}
+
+### 代码生成器 upms
+POST http://localhost:8081/code/generate
+Content-Type: application/json
+
+{
+  "maven": {
+    "groupId": "com.gls.gemini.upms",
+    "artifactId": "gemini-upms",
+    "version": "0.0.1-SNAPSHOT",
+    "name": "Gemini UPMS",
+    "description": "用户权限管理服务",
+    "parentVersion": "0.0.1-SNAPSHOT"
+  },
+  "datasource": {
+    "name": "upms",
+    "url": "jdbc:mysql://docker-server:3306/gemini_upms?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC",
+    "username": "root",
+    "password": "root",
+    "driverClassName": "com.mysql.cj.jdbc.Driver"
+  },
+  "tablePrefix": "t_"
+}
