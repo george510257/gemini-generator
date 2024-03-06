@@ -47,8 +47,10 @@ public class ApplicationCodeBuilder implements CodeBuilder {
 
         // 生成文件 - 父pom
         this.createFile(root, templateData, CodeEnums.PARENT_POM);
-        this.createFile(root, templateData, CodeEnums.GIT_IGNORE);
-        this.createFile(root, templateData, CodeEnums.README_MD);
+        // 生成文件 - 父git ignore
+        this.createFile(root, templateData, CodeEnums.PARENT_GIT_IGNORE);
+        // 生成文件 - 父readme
+        this.createFile(root, templateData, CodeEnums.PARENT_README_MD);
 
         // 生成文件 - boot pom
         this.createFile(root, templateData, CodeEnums.BOOT_POM);
@@ -59,5 +61,9 @@ public class ApplicationCodeBuilder implements CodeBuilder {
 
         // 生成文件 - sdk pom
         this.createFile(root, templateData, CodeEnums.SDK_POM);
+        // 生成文件 - sdk auto config
+        this.createFile(root, templateData, CodeEnums.SDK_AUTO_CONFIG);
+        // 生成文件 - sdk imports
+        this.createFile(root, templateData, CodeEnums.SDK_IMPORTS);
     }
 }

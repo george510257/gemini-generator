@@ -1,0 +1,17 @@
+package ${groupId}.sdk;
+
+import org.springframework.cloud.openfeign.EnableFeignClients;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
+/**
+ * ${name}sdk自动配置
+ *
+ * @author gemini 自动生成
+ * @version ${version}
+ */
+@Configuration
+@ComponentScan
+@EnableFeignClients
+public class ${appNameUpper}SdkAutoConfig {
+}
