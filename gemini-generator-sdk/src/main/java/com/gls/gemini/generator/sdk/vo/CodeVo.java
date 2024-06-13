@@ -5,6 +5,9 @@ import lombok.Data;
 
 import java.io.Serializable;
 
+/**
+ * 代码生成
+ */
 @Data
 @Schema(title = "代码生成", description = "代码生成")
 public class CodeVo implements Serializable {
